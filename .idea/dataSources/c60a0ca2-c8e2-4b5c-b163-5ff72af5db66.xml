@@ -809,9 +809,9 @@
     <table id="202" parent="3" name="user"/>
     <column id="203" parent="202" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11) unsigned|0s</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>0</DefaultExpression>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="204" parent="202" name="username">
