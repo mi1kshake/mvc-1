@@ -4,7 +4,8 @@
 <form action="login" method="post">
     账号：<input name="username" id="username"/><br/>
     密码：<input name="password" id="password"/><br/>
-    <input type="submit" />
+    <input type="submit" value="登录"/>
+    <a href="register">注册</a>
 </form>
 
 <jsp:include page="../public/footer.jsp"/>

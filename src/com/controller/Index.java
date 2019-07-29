@@ -71,6 +71,15 @@ public class Index {
     }
 
     /**
+     * 用户注册
+     */
+    @RequestMapping("register")
+    public String Register(String username,String password,String check,Model model){
+        model.addAttribute("title","用户注册");
+        return "register";
+    }
+
+    /**
      * 注销登录
      */
     @RequestMapping("logout")
