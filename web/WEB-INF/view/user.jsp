@@ -1,6 +1,17 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: www
+  Date: 2019/7/26
+  Time: 9:07
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:include page="../public/header.jsp"/>
-
+<html>
+<head>
+    <title>个人中心</title>
+</head>
+<body>
+个人中心
 <%
     out.print(" <a href='");
     if(session.getAttribute("user") == null){
@@ -11,5 +22,5 @@
     }
     out.print("</a>");
 %>
-
-<jsp:include page="../public/footer.jsp"/>
+</body>
+</html>
