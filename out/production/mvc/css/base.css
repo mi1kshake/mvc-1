@@ -16,17 +16,99 @@ footer{
     padding-bottom: 10px;
     text-align: center;
 }
-.friend-link{
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: #ff5000;
+}
+.top{
+    padding: 5px;
+    background: #efefef;
+    border-bottom: 1px solid #cccccc;
+}
+.top-menu{
+    height: 20px;
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+.top-menu-left{
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: block;
+}
+.top-menu-left li{
+    list-style: none;
+    display: inline-block;
+}
+.top-menu-right{
+    margin: 0;
+    padding: 0;
+    float: right;
+    display: block;
+}
+.top-menu-right li{
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+.head{
     width: 100%;
-    background: aqua;
+    background: #ffffff;
+}
+.head-div{
+    width: 1200px;
+    margin: 0 auto;
+}
+.head-menu{
+    width: 100%;
+    background: #ff9000;
+}
+.head-menu-list{
+    padding: 0;
+    color: #ffffff;
+    width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+.head-menu-list .main{
+    width: 200px;
+    text-align: center;
+    background: #ff5000;
+}
+.head-menu-list li{
+    padding: 5px 10px 5px 10px;
+    display: inline-block;
+}
+.body{
+    width: 100%;
+    background: #efefef;
+}
+.body-div{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+}
+.friend-link{
+    width: 1200px;
+    margin: 0 auto;
 }
 .friend-link-list{
     list-style: none;
 }
 .friend-link-list li{
-    float: left;
     padding: 10px;
 }
 .boundary{
-    width: 90%;
+    width: 1200px;
+    border: 0;
+    border-bottom: 1px solid #cccccc;
+}
+.cut-line{
+    color: #cccccc;
 }
