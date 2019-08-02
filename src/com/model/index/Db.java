@@ -34,6 +34,19 @@ public class Db {
         }
     }
 
+    public ResultSet fetchDesc(String table) {
+        try{
+            Class.forName(driver);
+            Connection conn = DriverManager.getConnection(url, username, password);
+            String sql = String.format("select * from `%s` order by id desc", table);
+            PreparedStatement data = conn.prepareStatement(sql);
+            return data.executeQuery();
+        }catch(Exception e){
+            System.out.println("[Db.fetchAll]:Unable to find " + table + " in tables.");
+            return null;
+        }
+    }
+
     /**
      * 单数据 方法
      * @param table 数据表名
@@ -90,7 +103,6 @@ public class Db {
             value.append(" where ").append(key).append("='").append(val).append("'");
             Connection conn = DriverManager.getConnection(url, username, password);
             String sql = String.format("update %s set %s", table, value.toString());
-            System.out.println(sql);
             PreparedStatement data = conn.prepareStatement(sql);
             data.executeUpdate() ;
             return true;

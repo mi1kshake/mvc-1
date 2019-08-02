@@ -51,25 +51,7 @@ public class UserController {
         if(session.getAttribute("uid") == null){
             try{
                 User user = new User(username, password);
-                boolean state = user.checkLogin();
-                if(state){
-                    this.Nickname = user.getNickname();
-                    this.Username = user.getUsername();
-                    this.College = user.getCollege();
-                    this.Room = user.getRoom();
-                    ArrayList info = new ArrayList();
-                    info.add(this.Nickname);
-                    boolean add = info.add(this.Username);
-                    info.add(this.College);
-                    info.add(this.Room);
-                    session.setAttribute("info", info);
-                    session.setAttribute("uid", user.getUid());
-                    System.out.println("[LOGIN]:" + username);
-                    return "redirect:index";
-                }
-                else{
-                    return "user/login";
-                }
+                return getString(username, session, user);
             }catch (Exception e){
                 return "user/login";
             }
@@ -107,15 +89,7 @@ public class UserController {
             boolean state = user.checkRegister();
             if(state){
                 if (user.Register()) {
-                    boolean f = user.checkLogin();
-                    if(f){
-                        session.setAttribute("uid", user.getUid());
-                        System.out.println("[LOGIN]:" + username);
-                        return "redirect:index";
-                    }
-                    else{
-                        return "user/login";
-                    }
+                    return getString(username, session, user);
                 }
                 else{
                     return "user/register";
@@ -125,6 +99,32 @@ public class UserController {
                 model.addAttribute("msg","账号已存在");
                 return "user/register";
             }
+        }
+    }
+
+    /**
+     * 获取用户信息
+     */
+    private String getString(String username, HttpSession session, User user) {
+        boolean f = user.checkLogin();
+        if(f){
+            this.Nickname = user.getNickname();
+            this.Username = user.getUsername();
+            this.College = user.getCollege();
+            this.Room = user.getRoom();
+            ArrayList<String> info = new ArrayList<>();
+            info.add(this.Nickname);
+            info.add(this.Username);
+            info.add(this.College);
+            info.add(this.Room);
+            session.setAttribute("info", info);
+            session.setAttribute("uid", user.getUid());
+            session.setAttribute("sid", user.getSid());
+            System.out.println("[LOGIN]:" + username);
+            return "redirect:index";
+        }
+        else{
+            return "user/login";
         }
     }
 }

@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * 商品控制器
  */
 @Controller
-@RequestMapping("goods")
-public class GoodsController {
+@RequestMapping("shop")
+public class ShopController {
 
     /**
      * 商品页面
      */
     @RequestMapping("index")
     public String Index(){
-        return "goods/index";
+        return "shop/index";
     }
 
     /**
@@ -37,7 +37,7 @@ public class GoodsController {
             return "redirect:../user/login";
         }
         else{
-            return "goods/detail";
+            return "shop/detail";
         }
     }
 }

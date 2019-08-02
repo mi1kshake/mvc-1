@@ -27,7 +27,7 @@
                 用户注册
             </div>
             <div class="form-div">
-                <form action="register" method="post">
+                <form method="post">
                     <table>
                         <tr>
                             <td style="text-align: right;width: 80px;">账号</td>

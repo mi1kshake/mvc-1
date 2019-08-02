@@ -14,7 +14,7 @@
     <!-- 用户控制器 -->
     <bean name="user" class="com.controller.UserController"></bean>
     <!-- 商品控制器 -->
-    <bean name="goods" class="com.controller.GoodsController"></bean>
+    <bean name="goods" class="com.controller.ShopController"></bean>
     <!-- 订单控制器 -->
     <bean name="order" class="com.controller.OrderController"></bean>
     <!-- 店铺控制器 -->

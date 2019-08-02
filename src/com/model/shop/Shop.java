@@ -1,9 +1,9 @@
-package com.model.goods;
+package com.model.shop;
 
 /**
  * 商品类
  */
-public class Goods {
+public class Shop {
 
     /**
      * 参数表
@@ -15,7 +15,7 @@ public class Goods {
     /**
      * 带参构造
      */
-    public Goods(String uid, String title, Integer price){
+    public Shop(String uid, String title, Integer price){
         this.UID = uid;
         this.Title = title;
         this.Price = price;

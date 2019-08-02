@@ -21,7 +21,7 @@
                 用户登录
             </div>
             <div class="form-div">
-                <form action="login" method="post">
+                <form method="post">
                     账号：<input name="username" id="username"/><br/>
                     密码：<input name="password" id="password"/><br/>
                     <input type="submit" value="登录"/>
